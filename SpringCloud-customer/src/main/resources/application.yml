@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+spring:
+  datasource:  # 数据库配置
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: fx
+    password: 123
+  application:
+    name: cloud-customer
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
